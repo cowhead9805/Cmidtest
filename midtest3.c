@@ -1,8 +1,9 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main(void){
+int main(void)
+{
 
     int num;
 
@@ -10,12 +11,10 @@ int main(void){
 
     num = rand();
 
-    if(num % 2 ==0)
-    printf("생성된 %d 난수는 짝수입니다. \n", num);
+    if (num % 2 == 0)
+        printf("생성된 %d 난수는 짝수입니다. \n", num);
     else
-    printf("생성된 %d 난수는 짝수입니다.\n", num);
+        printf("생성된 %d 난수는 짝수입니다.\n", num);
 
     return 0;
-
-
 }

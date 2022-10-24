@@ -1,15 +1,40 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(void){
+int main(void)
+{
 
-    int meter;
-    int mile;
+    int num1, num2; 
+    char c;
 
-    printf("마일을 입력하세요.: ");
-    scanf("%d", &mile);
+    printf("수식을 입력하세요 : ");
+    scanf("%d%c%d", &num1, &c, &num2);
 
-    meter = (mile*1609);
+    switch (c)
+    {
+    case '+':
+        printf("%d %c %d = %d\n", num1, c, num2, num1 + num2);
+        break;
 
-    printf("%d 마일은 %d 미터 입니다.\n",mile,meter);
+    case '-':
+        printf("%d %c %d = %d\n", num1, c, num2, num1 - num2);
+        break;
 
+    case '*':
+        printf("%d %c %d = %d\n", num1, c, num2, num1 * num2);
+        break;
+
+    case '/':
+        printf("%d %c %d = %lf\n", num1, c, num2, (double)num1 / num2);
+        break;
+
+    case '%':
+        printf("%d %c %d = %d98\n", num1, c, num2, num1 % num2);
+        break;
+
+    default:
+        printf("지원되지 않는 연산자입니다.\n");
+        break;
+    }
+
+    return 0;
 }
